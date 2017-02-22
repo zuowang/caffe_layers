@@ -9,3 +9,6 @@ cp layers/normalize_layer/normalize_layer.cpp $CAFFE_HOME/src/caffe/layers/norma
 cp layers/Aggregate_layer/Aggregate_layer.hpp $CAFFE_HOME/include/caffe/layers/Aggregate_layer.hpp
 cp layers/Aggregate_layer/Aggregate_layer.cpp $CAFFE_HOME/src/caffe/layers/Aggregate_layer.cpp
 ```
+
+
+python implementation of customer layer produces the same results, but is less efficient
