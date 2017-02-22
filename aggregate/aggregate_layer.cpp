@@ -37,6 +37,16 @@ void AggregateLayer<Dtype>::Forward_cpu(
 	}
 	tmp.clear();
 }
+	
+void AggregateLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
+    const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom) {
+	const Dtype* bottom_diff = bottom[0]->cpu_diff();
+	const Dtype * top_diff = top[0]->cpu_diff();
+	
+	for (int i = 0; i < bottom[0]->num(); i++){
+		bottom_diff[i] = top_diff;
+	}
+}	
 INSTANTIATE_CLASS(AggregateLayer);
 REGISTER_LAYER_CLASS(Aggregate);
 }
