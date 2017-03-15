@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 #include <vector>
 
 #include "caffe/layers/aggregate_layer.hpp"
